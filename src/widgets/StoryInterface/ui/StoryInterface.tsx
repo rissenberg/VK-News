@@ -45,7 +45,7 @@ export const StoryInterface = (props: IProps) => {
 							dangerouslySetInnerHTML={{ __html: story.text ?? '' }}
 						/>
 
-						<Link> {story.url} </Link>
+						<Link href={story.url} target="_blank"> {story.url} </Link>
 					</Div>
 
 				</RichCell>

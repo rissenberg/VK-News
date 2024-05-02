@@ -36,6 +36,10 @@ export const LoadStoryCard = (props: IProps) => {
 		</Group>)
 		:
 		(<Group>
-			{ story && <StoryCard story={story} author={author}/>}
+			{ story && (story.dead ?
+				<Header> Story was deleted </Header>
+				:
+				<StoryCard story={story} author={author}/>)
+			}
 		</Group>);
 };
