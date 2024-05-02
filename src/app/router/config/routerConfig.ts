@@ -4,8 +4,13 @@ export const DEFAULT_PANEL = 'main';
 
 export const hashRouter = createHashRouter([
 	{
-		path: '/main',
+		path: '/',
 		panel: 'main',
+		view: 'default_view',
+	},
+	{
+		path: '/stories/:id',
+		panel: 'story',
 		view: 'default_view',
 	},
 	{

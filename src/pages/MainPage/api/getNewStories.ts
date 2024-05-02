@@ -1,5 +1,6 @@
 const api_fetch = async ({ signal }: { signal: AbortSignal }) => {
-	const url = 'https://hacker-news.firebaseio.com/v0/newstories.json';
+	// TODO change to new stories
+	const url = 'https://hacker-news.firebaseio.com/v0/beststories.json';
 	const options = {
 		method: 'GET',
 		headers: {

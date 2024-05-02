@@ -1,8 +1,10 @@
 import React from 'react';
-import { AppRoot, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { AppRoot, Panel, View } from '@vkontakte/vkui';
 import { useGetPanelForView } from '@vkontakte/vk-mini-apps-router';
 import { DEFAULT_PANEL } from './router';
 import { MainPage } from '../pages/MainPage';
+import { NotFound } from '../pages/NotFound';
+import { StoryPage } from '../pages/StoryPage';
 
 function App() {
 	const activePanel = useGetPanelForView('default_view');
@@ -13,8 +15,11 @@ function App() {
 				<Panel id="main">
 					<MainPage />
 				</Panel>
+				<Panel id="story">
+					<StoryPage />
+				</Panel>
 				<Panel id="404">
-					<PanelHeader> 404 - Nothing found! </PanelHeader>
+					<NotFound />
 				</Panel>
 			</View>
 		</AppRoot>

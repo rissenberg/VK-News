@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getItemInfo, IItem } from '../../../entity/Item';
-import { Group } from '@vkontakte/vkui';
+import { Group, Header } from '@vkontakte/vkui';
 import { getUserInfo, IUser } from '../../../entity/User';
 import React from 'react';
 import { StoryCard } from '../../../entity/StoryCard/ui/StoryCard';
@@ -27,13 +27,13 @@ export const LoadStoryCard = (props: IProps) => {
 	if (errorAuthor || errorStory)
 		return (
 			<Group>
-				Error occurred during data fetch
+				<Header> Error occurred during data fetch </Header>
 			</Group>
 		);
 
 	return (isFetchingStory || isFetchingAuthor) ?
 		(<Group>
-			Loading...
+			<Header> Loading... </Header>
 		</Group>)
 		:
 		(<Group>
