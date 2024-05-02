@@ -1,9 +1,8 @@
 import cls from './style.module.scss';
 import { IItem } from '../../Item';
 import { IUser } from '../../User';
-import { Button, Card, Div, Header, RichCell } from '@vkontakte/vkui';
+import { Button, Div, RichCell } from '@vkontakte/vkui';
 import React, { useState } from 'react';
-import { AlertHeader } from '@vkontakte/vkui/dist/components/Alert/AlertTypography';
 
 interface IProps {
 	comment: IItem,
@@ -27,7 +26,7 @@ export const Comment = (props: IProps) => {
 	return (
 		<>
 			<RichCell
-				subhead={author && `Author: ${author.id} [${author.karma > 0 && '+'}${author.karma}]`}
+				subhead={!author ? 'Loading...' : `Author: ${author.id} [${author.karma > 0 && '+'}${author.karma}]`}
 				caption={commentDate.toLocaleString()}
 				actions={
 					<Button

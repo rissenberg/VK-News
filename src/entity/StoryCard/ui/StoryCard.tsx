@@ -1,7 +1,7 @@
 import cls from './style.module.scss';
 import { IItem } from '../../Item';
 import { IUser } from '../../User';
-import { Button, Div, Header, RichCell } from '@vkontakte/vkui';
+import { Button, Div, RichCell } from '@vkontakte/vkui';
 import React from 'react';
 import { useRouteNavigator } from '@vkontakte/vk-mini-apps-router';
 

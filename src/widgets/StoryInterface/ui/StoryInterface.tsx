@@ -5,7 +5,6 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getUserInfo, IUser } from '../../../entity/User';
 import { CommentItem } from '../../../features/CommentItem';
-import * as repl from 'node:repl';
 
 interface IProps {
 	story: IItem,

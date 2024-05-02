@@ -3,7 +3,7 @@ import { getItemInfo, IItem } from '../../../entity/Item';
 import { Group, Header } from '@vkontakte/vkui';
 import { getUserInfo, IUser } from '../../../entity/User';
 import React from 'react';
-import { StoryCard } from '../../../entity/StoryCard/ui/StoryCard';
+import { StoryCard } from '../../../entity/StoryCard';
 
 interface IProps {
 	storyID: number,
