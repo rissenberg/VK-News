@@ -53,7 +53,7 @@ export const StoryInterface = (props: IProps) => {
 
 			<Group>
 				<Header>{story.descendants} {story.descendants === 1 ? 'Comment' : 'Comments'}</Header>
-				{story.kids.map(replyID =>
+				{story.kids?.map(replyID =>
 					<CommentItem commentID={replyID} key={replyID} />
 				)}
 			</Group>

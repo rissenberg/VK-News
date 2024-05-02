@@ -21,7 +21,6 @@ export const LoadStoryCard = (props: IProps) => {
 	const {
 		data: author,
 		error: errorAuthor,
-		isFetching: isFetchingAuthor
 	} = useQuery<IUser>(getUserInfo(story?.by));
 
 	if (errorAuthor || errorStory)
@@ -31,12 +30,12 @@ export const LoadStoryCard = (props: IProps) => {
 			</Group>
 		);
 
-	return (isFetchingStory || isFetchingAuthor) ?
+	return (isFetchingStory) ?
 		(<Group>
 			<Header> Loading... </Header>
 		</Group>)
 		:
 		(<Group>
-			{ story && author && <StoryCard story={story} author={author}/>}
+			{ story && <StoryCard story={story} author={author}/>}
 		</Group>);
 };
