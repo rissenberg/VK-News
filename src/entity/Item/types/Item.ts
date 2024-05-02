@@ -1,0 +1,15 @@
+export interface IItem {
+	id: number,
+	deleted: boolean,
+	type: 'job' | 'story' | 'comment' | 'poll' | 'pollopt',
+	by: string,
+	time: string,
+	text?: string,
+	dead: boolean,
+	parent: number,
+	kids: number[],
+	url?: string,
+	score: number,
+	title?: string,
+	descendants?: number,
+}
