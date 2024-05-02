@@ -7,7 +7,7 @@ import { useRouteNavigator } from '@vkontakte/vk-mini-apps-router';
 
 interface IProps {
 	story: IItem,
-	author: IUser,
+	author?: IUser,
 }
 
 export const StoryCard = (props: IProps) => {
@@ -22,7 +22,7 @@ export const StoryCard = (props: IProps) => {
 
 	return (
 		<RichCell
-			subhead={`Author: ${author.id} [${author.karma > 0 && '+'}${author.karma}]`}
+			subhead={!author ? 'Loading...' : `Author: ${author.id} [${author.karma > 0 && '+'}${author.karma}]`}
 			caption={storyDate.toLocaleString()}
 			afterCaption={
 				<Div

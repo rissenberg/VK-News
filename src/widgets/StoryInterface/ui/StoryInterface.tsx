@@ -45,7 +45,7 @@ export const StoryInterface = (props: IProps) => {
 							dangerouslySetInnerHTML={{ __html: story.text ?? '' }}
 						/>
 
-						<Link> {story.url} </Link>
+						<Link href={story.url} target="_blank"> {story.url} </Link>
 					</Div>
 
 				</RichCell>
@@ -53,7 +53,7 @@ export const StoryInterface = (props: IProps) => {
 
 			<Group>
 				<Header>{story.descendants} {story.descendants === 1 ? 'Comment' : 'Comments'}</Header>
-				{story.kids.map(replyID =>
+				{story.kids?.map(replyID =>
 					<CommentItem commentID={replyID} key={replyID} />
 				)}
 			</Group>
